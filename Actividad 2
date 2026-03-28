@@ -1,0 +1,46 @@
+/******************************************************************************
+            Lenguaje de Progamacion 1
+            Actividad 2
+            Operaciones Basicas en C++
+            Suma, Resta, Multiplicacion, Division.
+            Esteban Delgado Rubio
+    
+    ALT39 = '
+	ALT91 = [
+	ALT93 = ]
+	ALT123 = {
+	ALT124 = |
+	ALT125 =}
+            
+*******************************************************************************/
+#include <iostream>
+#include <iomanip>   // Para controlar las decimales
+
+using namespace std;
+
+int main() {
+    float num1, num2;
+
+    cout << "=== Calculadora ===" << endl << endl;
+
+    cout << "Escribe el primer número: ";
+    cin >> num1;
+
+    cout << "Escribe el segundo número: ";
+    cin >> num2;
+
+    cout << "\nResultados:" << endl;
+    cout << "La suma es: " << (num1 + num2) << endl;
+    cout << "La resta es: " << (num1 - num2) << endl;
+    cout << "La multiplicación es: " << (num1 * num2) << endl;
+
+    if (num2 != 0) {
+        // Mostrar la division con 4 decimales
+        cout << fixed << setprecision(4);
+        cout << "La división es: " << (num1 / num2) << endl;
+    } else {
+        cout << "La división es: No se puede dividir entre cero" << endl;
+    }
+
+    return 0;
+}
