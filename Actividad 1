@@ -1,0 +1,53 @@
+/******************************************************************************
+
+                         Aqui esta mi primera actividad
+
+ALT39 = '
+ALT91 = [
+ALT93 = ]
+ALT123 = {
+ALT124 = |
+ALT125 =}
+
+
+*******************************************************************************/
+
+#include <iostream>
+
+int main() {
+    int edad;
+
+    std::cout << "=== Determinar Mayoría de Edad ===\n\n";
+
+    // Este bucle es para la edades, si pone negativas o mayres a 99//
+    while (true) {
+        std::cout << "Porfavor ingrese su edad: ";
+        std::cin >> edad;
+
+        if (std::cin.fail()) {
+            std::cout << "Error: Solo se permiten números.\n";
+            std::cin.clear();           // Limpiar el error
+            std::cin.ignore(10000, '\n'); // Ignorar el resto de la línea
+            continue;
+        }
+
+        if (edad < 0) {
+            std::cout << "No minetas las edades negativas no exixten.\n";
+        }
+        else if (edad > 99) {
+            std::cout << "Es increible conocer a alguien tan mayor.\n";
+        }
+        else {
+            break;  // Si todo está bien, sale del bucle
+        }
+    }
+
+    // aqui muestra el resultado de si es mayor de edad o no lo es //
+    if (edad >= 18) {
+        std::cout << "\nTu tienes " << edad << " años, si eres mayor de edad." << std::endl;
+    } else {
+        std::cout << "\nTu tienes " << edad << " años, no eres mayor de edad." << std::endl;
+    }
+
+    return 0;
+}
